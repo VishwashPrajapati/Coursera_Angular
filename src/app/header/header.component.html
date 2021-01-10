@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <div class="container">
+    <mat-toolbar-row>
+      <!-- <span>Second Line</span> -->
+      <span routerLink="/">MySite</span>
+      <span class="example-spacer"></span>
+      <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon> -->
+      <p matLine><a mat-button routerLink="/home" routerLinkActive="active">Home</a></p>
+      <p matLine><a mat-button routerLink="/menu" routerLinkActive="active">Menu</a></p>
+      <p matLine><a mat-button routerLink="/about" routerLinkActive="active">About</a></p>
+      <p matLine><a mat-button routerLink="/contact" routerLinkActive="active">Contact</a></p>
+      <span class="flex-spacer"></span>
+      <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"> Login</span></a>
+      <!-- <span class="material-icons" routerLink="home">list</span> -->
+    </mat-toolbar-row>
+  </div>
+</mat-toolbar>
