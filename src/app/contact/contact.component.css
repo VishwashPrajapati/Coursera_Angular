@@ -1,0 +1,22 @@
+.flex-spacer{
+    flex: 1 1 auto;
+  }
+  .primary{
+    background-color: rgb(107, 180, 248);
+  }
+  .container{
+    margin: 20px;
+    display: flex;
+}
+
+.full-width {
+  width: 95%
+}
+
+.half-width {
+  width: 45%
+}
+
+.form-size {
+  width: 75%
+}

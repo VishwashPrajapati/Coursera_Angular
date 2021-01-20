@@ -25,8 +25,13 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +55,14 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatCardModule,
     MatGridListModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    FormsModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatSlideToggleModule
   ],
   providers: [DishService,PromotionserviceService,LeaderService],
   entryComponents:[LoginComponent],
