@@ -60,9 +60,9 @@
     
   </div>
   <div>
-    <mat-list fxFlex *ngIf="leader">
+    <mat-list fxFlex *ngIf="leader" [@expand]>
         <mat-list-item *ngFor="let x of leader">
-          <img matListAvatar src={{x.image}} alt={{x.name}}>
+          <img matListAvatar src="{{BaseURL + x.image}}" alt={{x.name}}>
           <h1 matLine> {{x.name}} </h1>
           <p matLine>
             <span> {{x.designation}} </span>

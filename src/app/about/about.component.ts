@@ -1,17 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { LeaderService } from '../services/leader.service';
 import { Leader } from '../shared/leader';
-
+import { flyInOut,expand } from '../animations/app.animations';
 
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  host: {
+    '[@flyInOut]': 'true',
+    'style': 'display:block'
+  },
+  animations: [
+    flyInOut(),
+    expand()
+  ]
 })
 export class AboutComponent implements OnInit {
 leader:Leader[];
-  constructor(private leaderservice:LeaderService) { }
+  constructor(private leaderservice:LeaderService,@Inject('BaseURL')private BaseURL) { }
 
   ngOnInit(): void {
     this.leaderservice.getLeaderData()
